@@ -4,6 +4,9 @@ jobs:
   build-and-run:
       runs-on: ubuntu-latest
       environment: Production
+      permissions:
+        contents: read
+        packages: write
   
       steps:
       - name: Build Docker Image and Push to GHCR
